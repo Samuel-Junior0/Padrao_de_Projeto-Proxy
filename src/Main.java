@@ -1,25 +1,13 @@
-import model.Usuario;
-import proxy.FilmePremiumProxy;
 
 public class Main {
     public static void main(String[] args) {
-        FilmePremiumProxy proxy = new FilmePremiumProxy();
 
-        Usuario user1 = new Usuario("Carlos", "PREMIUM");
-        Usuario user2 = new Usuario("Ana", "BÁSICO");
-        Usuario user3 = new Usuario("Marina", "PREMIUM");
-        Usuario user4 = new Usuario("Pedro", "BÁSICO");
-        Usuario user5 = new Usuario("","");
+        System.out.printf("Hello and welcome!");
 
-        proxy.assistir(user1);
-        proxy.assistir(user2);
-        proxy.assistir(user3);
-        proxy.assistir(user4);
-
-        try {
-            proxy.assistir(user5);
-        } catch (IllegalArgumentException e) {
-            System.out.println("Erro");
+        for (int i = 1; i <= 5; i++) {
+            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
+            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
+            System.out.println("i = " + i);
         }
     }
 }
